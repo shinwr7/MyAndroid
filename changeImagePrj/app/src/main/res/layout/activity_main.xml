@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 텍스트뷰, text="어플 보이기" id값 부여-->
+
+    <!-- 체크박스, text="체크시보임" id값부여-->
+
+    <!-- 텍스트뷰, text="보고싶은 사진" android:visibility="invisible"-->
+
+    <!-- 라디오그룹, android: visibility="invisible" -->
+
+    <TextView
+        android:id="@+id/showApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="373dp"
+        android:text="어플 보이기"
+        app:layout_constraintBottom_toTopOf="@+id/moon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="체크시보임"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/showApp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="48dp"
+        android:text="보고싶은 사진"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/checkbox" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginBottom="95dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/space"
+        app:layout_constraintStart_toStartOf="@+id/selectBtn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우주"
+         />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="달" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/selectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:text="선택완료"
+        app:layout_constraintBottom_toTopOf="@+id/moon"
+        app:layout_constraintStart_toStartOf="@+id/moon"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/moon"
+        android:layout_width="203dp"
+        android:layout_height="281dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/moon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showApp" />
+
+    <ImageView
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/space"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/moon"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+    <!-- 그룹 내부에 라디오버튼, id값부여-->
+
+    <!-- 버튼, text="선택 완료", invisible id부여-->
+
+    <!-- 이미지뷰, 사진 개수만큼 생성 id 부여 invisible-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
