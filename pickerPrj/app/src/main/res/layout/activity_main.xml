@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+<!--
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="clock"/>
+-->
+
+    <DatePicker
+        android:id="@+id/dPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:datePickerMode="calendar">
+    </DatePicker>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/inBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출근"></Button>
+
+        <TextView
+            android:id="@+id/inTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="체크인 시간 표시지점"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/outBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="퇴근"></Button>
+
+
+        <TextView
+            android:id="@+id/outTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="체크아웃 시간 표시지점"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
