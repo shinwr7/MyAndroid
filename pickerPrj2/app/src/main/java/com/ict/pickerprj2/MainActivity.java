@@ -39,8 +39,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
+
+                dPicker.updateDate((date.getYear()+1900),
+                                    date.getMonth(),
+                                    date.getDate());
+                tPicker.setHour(date.getHours());
+                tPicker.setMinute(date.getMinutes());
+
+
                 yearInt = dPicker.getYear();
-                month = dPicker.getMonth() + 1;
+                month = dPicker.getMonth();
                 day = dPicker.getDayOfMonth();
                 hour = tPicker.getHour();
                 minute = tPicker.getMinute();
@@ -54,9 +64,17 @@ public class MainActivity extends AppCompatActivity {
         outBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                long now = System.currentTimeMillis();
+                Date date = new Date(now);
+
+                dPicker.updateDate((date.getYear()+1900),
+                        date.getMonth(),
+                        date.getDate());
+                tPicker.setHour(date.getHours());
+                tPicker.setMinute(date.getMinutes());
 
                 yearInt = dPicker.getYear();
-                month = dPicker.getMonth() + 1;
+                month = dPicker.getMonth();
                 day = dPicker.getDayOfMonth();
 
                 tv2.setText(yearInt + "년/" + month + "월/" + day + "일/" + hour + "시/" + minute + "분");
